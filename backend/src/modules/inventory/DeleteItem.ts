@@ -1,19 +1,19 @@
 import { Arg, Int, Mutation, Resolver } from "type-graphql";
-import { Item } from "../../entity/Item";
+import { Service } from "typedi";
+import { ItemService } from "../../services/ItemService";
 
+@Service()
 @Resolver()
 export class DeleteItemResolver {
+  constructor(
+    private readonly itemsService: ItemService,
+  ) {}
+
   @Mutation(() => Boolean)
   async deleteItem(
     @Arg("itemId", () => Int) id: number,
   ): Promise<boolean> {
-    const item = await Item.findOne(id);
-
-    if (!item) {
-      throw new Error("Item not found.")
-    }
-
-    await Item.delete(item.id);
+    await this.itemsService.delete(id);
     
     return true;
   }

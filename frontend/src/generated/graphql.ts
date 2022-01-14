@@ -17,6 +17,10 @@ export type Scalars = {
   DateTime: any;
 };
 
+export type ExportFieldsInput = {
+  fields: Array<Scalars['String']>;
+};
+
 export type ExportInfo = {
   __typename?: 'ExportInfo';
   success: Scalars['Boolean'];

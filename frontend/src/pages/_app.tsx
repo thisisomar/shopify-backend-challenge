@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import { withUrqlClient } from 'next-urql'
-import urqlConfig from '../utils/urqlConfig'
+import urqlConfig from '../utils/createUrqlClient'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -1,0 +1,8 @@
+query GetItem($itemId: Int!) {
+  getItem(itemId: $itemId) {
+    id
+    name
+    description
+    quantity
+  }
+}

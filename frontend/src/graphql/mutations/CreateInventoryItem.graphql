@@ -1,0 +1,8 @@
+mutation CreateItem($name: String!, $description: String!, $quantity: Int!) {
+  createItem(item:{name: $name, description: $description quantity: $quantity}) {
+    id
+    name
+    description
+    quantity
+  }
+}

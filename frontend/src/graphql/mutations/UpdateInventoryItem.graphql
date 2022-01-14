@@ -1,0 +1,13 @@
+mutation UpdateItem($itemId: Int!, $name: String!, $description: String!, $quantity: Int!){
+  updateItem(item: {
+    id: $itemId
+    name: $name
+    description: $description
+    quantity: $quantity
+  }) {
+    name
+    description
+    quantity
+    updated
+  }
+}

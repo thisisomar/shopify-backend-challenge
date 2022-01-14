@@ -1,0 +1,8 @@
+query GetInventory {
+  items {
+    id
+    name
+    description
+    quantity
+  }
+}

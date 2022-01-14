@@ -1,0 +1,8 @@
+mutation ExportData($fields: [String!]!) {
+  exportData(
+    fields: $fields
+  ) {
+    success
+    url
+  }
+}

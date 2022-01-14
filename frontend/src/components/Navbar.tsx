@@ -7,8 +7,8 @@ import NextLink from 'next/link'
 
 const Links = [{
   id: 'home',
-  name: 'Inventory',
-  href: '/inventory',
+  name: 'Home',
+  href: '/',
 }]
 
 interface Link {

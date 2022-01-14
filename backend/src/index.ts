@@ -36,10 +36,7 @@ const main = async () => {
 
   const app = express();
   
-  app.use(cors({
-    credentials: true,
-    origin: 'http://localhost:3000'
-  }));
+  app.use(cors());
 
   // Static files here to save CSVs
   app.use('/csv', express.static(path.join(__dirname, '..', 'csv')));

@@ -4,7 +4,8 @@
   "description": "This is the Shopify Backend Developer Intern challenge, attempted by me Omar Abu Samra :)",
   "main": "src/index.ts",
   "scripts": {
-    "start": "ts-node-dev --respawn src/index.ts"
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "start": "ts-node src/index.ts"
   },
   "author": "",
   "license": "ISC",

@@ -50,7 +50,7 @@ const urqlConfig: NextUrqlClientConfig = (ssrExchange) => {
   ];
 
   return {
-    url: process.env.GRAPHQL_API_URL || "http://localhost:4000/graphql",
+    url: process.env.NEXT_PUBLIC_GRAPHQL_API_URL || 'http://localhost:4000/api',
     exchanges
   }
 }

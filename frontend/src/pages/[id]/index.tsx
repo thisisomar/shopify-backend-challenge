@@ -6,6 +6,7 @@ import { InputField } from "../../components/InputField";
 import Layout from "../../components/Layout";
 import { useUpdateItemMutation } from "../../generated/graphql";
 import { useGetItemFromUrl } from "../../utils/getItemFromUrl";
+import { ItemSchema } from "../../utils/validatonSchemas";
 
 const InventoryItemPage: NextPage = () => {
   const router = useRouter();
@@ -56,6 +57,7 @@ const InventoryItemPage: NextPage = () => {
                   })
                   router.back();
                 }}
+                validationSchema={ItemSchema}
               >
                 {({ isSubmitting }) => (
                   <Form>

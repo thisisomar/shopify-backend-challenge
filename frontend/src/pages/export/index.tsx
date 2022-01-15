@@ -1,4 +1,4 @@
-import { Flex, useToast, Heading } from "@chakra-ui/react";
+import { Flex, useToast, Heading, Button, ButtonGroup } from "@chakra-ui/react";
 import { Formik, Form } from "formik";
 import { CheckboxContainer, CheckboxControl, SubmitButton } from "formik-chakra-ui";
 import { NextPage } from "next";
@@ -9,7 +9,7 @@ import { useExportDataMutation } from "../../generated/graphql";
 const ExportItemPage: NextPage = () => {
   const router = useRouter();
   const toast = useToast();
-  const [, exportData ] = useExportDataMutation();
+  const [, exportData] = useExportDataMutation();
 
   return (
     <Layout>
@@ -18,7 +18,7 @@ const ExportItemPage: NextPage = () => {
           <Heading mb={4}>Export Inventory</Heading>
           <Heading size={"xs"} mb={4}>Select the fields to export in order you'd like them displayed. If none are selected, all fields will be exported.</Heading>
         </Flex>
-        <Formik initialValues={{ fields: ["id"]}}
+        <Formik initialValues={{ fields: ["id"] }}
           onSubmit={async (values, { setSubmitting }) => {
             console.log("Submitted")
             const response = await exportData({
@@ -35,7 +35,7 @@ const ExportItemPage: NextPage = () => {
 
             const url = response.data?.exportData.url;
             window.location.href = url as string;
-          }} 
+          }}
         >
           <Form>
             <CheckboxContainer name="fields">
@@ -52,9 +52,19 @@ const ExportItemPage: NextPage = () => {
                 Quantity
               </CheckboxControl>
             </CheckboxContainer>
-            <SubmitButton mt={4} colorScheme={"blue"}>
-              Export
-            </SubmitButton>
+            <ButtonGroup mt={4}>
+              <SubmitButton colorScheme={"blue"}>
+                Export
+              </SubmitButton>
+              <Button
+                colorScheme={'gray'}
+                onClick={() => {
+                  router.back();
+                }}
+              >
+                Cancel
+              </Button>
+            </ButtonGroup>
           </Form>
         </Formik>
       </Flex>

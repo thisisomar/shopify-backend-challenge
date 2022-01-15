@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { InputField } from "../../components/InputField";
 import Layout from "../../components/Layout";
 import { useCreateItemMutation } from "../../generated/graphql";
+import { ItemSchema } from "../../utils/validatonSchemas";
 
 const CreateInventoryItemPage: NextPage = () => {
   const [, createItem]  = useCreateItemMutation();
@@ -22,8 +23,6 @@ const CreateInventoryItemPage: NextPage = () => {
                 initialValues={{name: "", description: "", quantity: "",
                 }}
                 onSubmit={async (values, { setSubmitting }) => {
-                  console.log("Updated Item")
-                  console.log(values)
                   await createItem({
                     name: values.name || "",
                     description: values.description || "",
@@ -39,6 +38,7 @@ const CreateInventoryItemPage: NextPage = () => {
                   })
                   router.back();
                 }}
+                validationSchema={ItemSchema}
               >
                 {({ isSubmitting }) => (
                   <Form>
@@ -56,6 +56,7 @@ const CreateInventoryItemPage: NextPage = () => {
                         placeholder="Description"
                         label="Description"
                         type="text"
+                        
                       />
                     </GridItem>
                     <GridItem colSpan={1}>

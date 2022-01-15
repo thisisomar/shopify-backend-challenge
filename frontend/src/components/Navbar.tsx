@@ -20,17 +20,17 @@ interface Link {
 
 const NavLink = ({ children, link }: { children: ReactNode, link: Link }) => (
   <NextLink href={link.href}>
-   <Link
-    px={2}
-    py={1}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
-    }}
-    fontSize={"2xl"}
-    href={"3"}>
-    {children}
+    <Link
+      px={2}
+      py={1}
+      rounded={"md"}
+      _hover={{
+        textDecoration: "none",
+        bg: useColorModeValue("gray.200", "gray.700"),
+      }}
+      fontSize={"2xl"}
+      href={"3"}>
+      {children}
     </Link>
   </NextLink>
 );
@@ -41,8 +41,8 @@ export default function Navbar() {
   return (
     <>
       <Box
-        bg={useColorModeValue("white", "gray.800")} 
-        color={useColorModeValue("gray.600", "white")} 
+        bg={useColorModeValue("white", "gray.800")}
+        color={useColorModeValue("gray.600", "white")}
         borderBottom={1}
         borderStyle={"solid"}
         borderColor={useColorModeValue("gray.200", "gray.900")}
@@ -52,7 +52,7 @@ export default function Navbar() {
             size={"md"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
-            display={{ md: "none"}}
+            display={{ md: "none" }}
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={"center"}>
@@ -67,20 +67,16 @@ export default function Navbar() {
             </HStack>
           </HStack>
           <Flex alignItems={"center"}>
-            <Menu>
-              <MenuButton
-                as={Button}
+            <Link href="https://github.com/thisisomar/shopify-backend-challenge" target={"_blank"}>
+              <IconButton
                 rounded={"full"}
-                variant={"lin"}
+                variant={"link"}
                 cursor={"pointer"}
-                minW={0}>
+                aria-label="GitHub link to this project"
+                >
                 <Icon as={FiGithub} w={8} h={8} />
-              </MenuButton>
-              <MenuList>
-                <MenuItem>Frontend</MenuItem>
-                <MenuItem>Backend</MenuItem>
-              </MenuList>
-            </Menu>
+              </IconButton>
+            </Link>
           </Flex>
         </Flex>
 

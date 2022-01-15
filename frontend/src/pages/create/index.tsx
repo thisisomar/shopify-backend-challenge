@@ -73,7 +73,7 @@ const CreateInventoryItemPage: NextPage = () => {
                         type="submit"
                         isLoading={isSubmitting}
                       >
-                        Save
+                        Create
                       </Button>
                       <Button
                         colorScheme={'gray'}

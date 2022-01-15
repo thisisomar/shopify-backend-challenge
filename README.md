@@ -1,10 +1,10 @@
-
-# Shopify Challenge
-Welcome to my Shopify Backend Challenge! For those who don't know what this challenge is and happened to stumble upon this repository, you can check it out [here][https://docs.google.com/document/d/1z9LZ_kZBUbg-O2MhZVVSqTmvDko5IJWHtuFmIu_Xg1A/edit#]
-
-For this challenge, I created a back-end GraphQL API for an inventory management system with basic CRUD capabilities. In addition to CRUD implementation, I had to pick one out of a list mentioned in the Google Docs. The feature I picked was **Push a button export product data to a CSV**. 
  
- **Demo Link:** 
+# Shopify Backend Challenge 2022
+Welcome to my Shopify Backend Challenge for 2022! For those who don't know what this challenge is and happened to stumble upon this repository, you can check it out [here](https://docs.google.com/document/d/1z9LZ_kZBUbg-O2MhZVVSqTmvDko5IJWHtuFmIu_Xg1A/edit#)
+
+For this challenge, I created a back-end GraphQL API representing an inventory management system with basic CRUD capabilities. In addition to CRUD implementation, I had to pick one feature out of a list mentioned in the Google Docs. The feature I picked was **Push a button export product data to a CSV**. 
+ 
+ **Demo Link:** https://shopify-backend-challenge.vercel.app/
 
 ## Tech Stack
 
@@ -37,7 +37,7 @@ Once you're in the backend folder, you need to install all the dependencies
     npm install
 After all the dependencies have installed, you will be able to start the backend using the following command:
 
-    npm start
+    npm run dev
 
 And voila....! You should be seeing a series of SQL statements and a final message that says
 
@@ -57,7 +57,7 @@ Install all the dependencies, this one might take a while!
 
     npm install
 
-Now that all the dependencies are installed, you should be able to start frontend using the command:
+Now that all the dependencies are installed, you should be able to start the frontend using the command:
 
     npm run dev
 
@@ -76,7 +76,7 @@ This is the inventory / home page. You're able to view all inventory items, you 
 This is the page where you're able to create a new item, all the fields are required. After filling the fields out, you can press the Create button which will take you back to the Home page where you can see your new item.
 ![Create Inventory Item Page](https://i.imgur.com/3fPQT8Q.png)
 ### Edit Item Page
-This is the page responsible for editing an item, you're able to edit only the Name, Description and Quantity fields. All of these fields are required. If you choose to modify the fields, you can press the Save button which lead you back to the Home page where you can see your updated data.
+This is the page responsible for editing an item, you're able to edit only the Name, Description and Quantity fields. All of these fields are required. If you choose to modify the fields, you can press the Save button which leads you back to the Home page where you can see your updated data.
 ![Edit Item Page](https://i.imgur.com/vKEFbp6.png)
 ### Export Inventory Data Page (Special Feature)
 This is the page responsible for exporting all ***inventory data*** to a CSV sheet. You can select any of the fields you want. If you choose not to select any fields, all fields will be exported by default. After pressing the Export button, you will be prompted to download/open the CSV sheet and will be sent back to the home page.![Export Inventory Data Page](https://i.imgur.com/tnHwvzu.png)

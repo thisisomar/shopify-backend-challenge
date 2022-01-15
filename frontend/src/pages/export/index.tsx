@@ -16,7 +16,7 @@ const ExportItemPage: NextPage = () => {
       <Flex w='100%' direction={"column"}>
         <Flex direction={"column"}>
           <Heading mb={4}>Export Inventory</Heading>
-          <Heading size={"xs"} mb={4}>Select the fields to export in order you'd like them displayed. If none are selected, all fields will be exported.</Heading>
+          <Heading size={"xs"} mb={4}>Select the fields to export in order you&#39;d like them displayed. If none are selected, all fields will be exported.</Heading>
         </Flex>
         <Formik initialValues={{ fields: ["id"] }}
           onSubmit={async (values, { setSubmitting }) => {
@@ -57,7 +57,7 @@ const ExportItemPage: NextPage = () => {
                 Export
               </SubmitButton>
               <Button
-                colorScheme={'gray'}
+                colorScheme={"gray"}
                 onClick={() => {
                   router.back();
                 }}

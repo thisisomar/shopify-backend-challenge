@@ -60,7 +60,7 @@ export class ExportDataResolver {
 
     csvWriter.writeRecords(records)
 
-    const url = `http://localhost:4000/csv/${fileName}`;
+    const url = process.env.NODE_ENV === "production" ? `${process.env.APP_URL}/csv/${fileName}` : `http://localhost:4000/csv/${fileName}`;
   
     return {
       success: true,

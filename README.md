@@ -4,9 +4,7 @@ Welcome to my Shopify Backend Challenge for 2022! For those who don't know what 
 
 For this challenge, I created a back-end GraphQL API representing an inventory management system with basic CRUD capabilities. In addition to CRUD implementation, I had to pick one feature out of a list mentioned in the Google Docs. The feature I picked was **Push a button export product data to a CSV**. 
  
- **Demo Link:** https://shopify-backend-challenge.vercel.app/
- 
- **Warning - If the demo link times out, please try refreshing after. Unfortunately with the free plans of Heroku and Vercel, the app will stop running unless requested.**
+ **Demo Link:** https://omar-shopify-backend-challenge.netlify.app
 
 ## Tech Stack
 

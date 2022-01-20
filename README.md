@@ -4,7 +4,7 @@ Welcome to my Shopify Backend Challenge for 2022! For those who don't know what 
 
 For this challenge, I created a back-end GraphQL API representing an inventory management system with basic CRUD capabilities. In addition to CRUD implementation, I had to pick one feature out of a list mentioned in the Google Docs. The feature I picked was **Push a button export product data to a CSV**. 
  
- **Demo Link:** https://shopify-backend-challenge.vercel.app/
+ **Demo Link:** https://omar-shopify-backend-challenge.netlify.app
 
 ## Tech Stack
 
@@ -24,7 +24,7 @@ While front-end was not focused on for this challenge, here is the stack below f
 
 ## Setting up / Installation
 
-In order to run this project locally, you'll need to install the LTS version of Node.JS, it can be downloaded here: [https://nodejs.org /en/](https://nodejs.org/en/). If you have Node already, anything above v16 should be fine.
+In order to run this project locally, you'll need to install the LTS version of Node.JS, it can be downloaded here: [https://nodejs.org/en/](https://nodejs.org/en/). If you have Node already, anything above v16 should be fine.
 
 Please make sure you clone the repository if you haven't already :)
 
@@ -67,7 +67,7 @@ Voila! The frontend should be up and running, you will see a message like this:
 
 If the port is **not** 3000, that means you have something else running on port 3000 which is completely fine, you can navigate to the link provided in the console. In this case, the link is http://localhost:3000
 
-You should be able to see the inventory page. Below is a gallery / description of the frontend application so you're aware of it's capabilities!
+You should be able to see the inventory page. Below is a gallery / description of the frontend application so you're aware of its capabilities!
 
 ## Gallery
 This is the inventory / home page. You're able to view all inventory items, you can edit or delete items using the icons. The Edit icon will send you to a page where you can edit an item, and the Delete icon deletes the item.
